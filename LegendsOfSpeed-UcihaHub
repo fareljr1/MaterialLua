@@ -1506,6 +1506,52 @@ game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer(unpa
 end
 end)
 
+egg:Label("Space Eggs")
+
+egg:Toggle("Space Crystal",function(state)
+_G.Mm = (state and true or false)
+	wait()
+	while _G.Mm == true do
+		wait()
+local args = {
+    [1] = "openCrystal",
+    [2] = "Space Crystal"
+}
+
+game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer(unpack(args))
+end
+end)
+
+egg:Label("Desert Eggs")
+
+egg:Toggle("Electro Crystal",function(state)
+_G.Mm = (state and true or false)
+	wait()
+	while _G.Mm == true do
+		wait()
+local args = {
+    [1] = "openCrystal",
+    [2] = "Electro Crystal"
+}
+
+game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer(unpack(args))
+end
+end)
+
+egg:Toggle("Desert Crystal",function(state)
+_G.Mm = (state and true or false)
+	wait()
+	while _G.Mm == true do
+		wait()
+local args = {
+    [1] = "openCrystal",
+    [2] = "Desert Crystal"
+}
+
+game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer(unpack(args))
+end
+end)
+
 misc:Label("Misc")
 
 	
