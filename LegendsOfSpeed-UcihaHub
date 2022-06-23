@@ -20,11 +20,7 @@ local VLib = loadstring(game:HttpGet("https://pastebin.com/raw/VksikqGT"))()
 local win = VLib:Window("Legends Of Speeds", Color3.fromRGB(196, 40, 28))
 
 local main = win:Tab("Main")
-local ss = win:Tab("City Farm")
-local space = win:Tab("Space Farm")
-local desert = win:Tab("Desert Farm")
-local snow = win:Tab("Snow Farm")
-local magma = win:Tab("Magma Farm")
+local ss = win:Tab("Auto Farm")
 local sss = win:Tab("Teleport")
 local egg = win:Tab("Egg")
 local misc = win:Tab("Misc")
@@ -435,15 +431,15 @@ game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-559.2, -7.45058e-08, 417.
 end)
 
 sss:Button("Snow City", function()
-game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-858.358, 0.5, 2170.35))
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-9677.6640625, 59.072853088378906, 3783.736572265625))
 end)
 
 sss:Button("Magma City", function()
-game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1707.25, 0.550008, 4331.05))
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-11053.3837890625, 217.0328369140625, 4896.10986328125))
 end)
 
 sss:Button("Legends Highway", function()
-game.Players.LocalPlayer.Character:MoveTo(Vector3.new(3594.68, 214.804, 7274.56))
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-13097.8583984375, 217.0328369140625, 5904.84716796875))
 end)
 
 sss:Button("Space", function()
@@ -455,9 +451,9 @@ game.Players.LocalPlayer.Character:MoveTo(Vector3.new(2508.404296875, 14.8340749
 end)
 
 
-space:Label("Space Farm")
+ss:Label("Space Farm")
 
-space:Toggle("Space Farm",function(state)
+ss:Toggle("Space Farm",function(state)
 _G.FastFarm = (state and true or false)
 	wait() 
 while _G.FastFarm == true do
@@ -540,7 +536,7 @@ game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Space
 end
 end)
 
-space:Toggle("Auto Glitch",function(state)
+ss:Toggle("Auto Glitch",function(state)
 _G.GlitchFarm = (state and true or false)
 	wait() 
 while _G.GlitchFarm == true do
@@ -604,7 +600,7 @@ game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Sp
 end
 end)
 
-space:Toggle("Space Farm Gems",function(state)
+ss:Toggle("Space Farm Gems",function(state)
 _G.GlitchFarm = (state and true or false)
 	wait() 
 while _G.GlitchFarm == true do
@@ -618,7 +614,7 @@ end
 end)
 
 
-space:Toggle("Space Hoops",function(state)
+ss:Toggle("Space Hoops",function(state)
 	_G.Hoops = (state and true or false)
 	wait()
 	while _G.Hoops == true do
@@ -632,7 +628,7 @@ space:Toggle("Space Hoops",function(state)
         end
 		end)
 
-space:Toggle("Auto Finish Race",function(state)
+ss:Toggle("Auto Finish Race",function(state)
 _G.Race = (state and true or false)
 	wait()
 	while _G.Race == true do
@@ -647,9 +643,9 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4379.24
 end
 end)
 
-desert:Label("Desert Farm")
+ss:Label("Desert Farm")
 
-desert:Toggle("Desert Farm Orbs",function(state)
+ss:Toggle("Desert Farm Orbs",function(state)
 _G.Race = (state and true or false)
 	wait()
 	while _G.Race == true do
@@ -716,7 +712,7 @@ end
 end)
 
 
-desert:Toggle("Auto Glitch",function(state)
+ss:Toggle("Auto Glitch",function(state)
 _G.Race = (state and true or false)
 	wait()
 	while _G.Race == true do
@@ -783,7 +779,7 @@ end
 end)
 
 
-desert:Toggle("Desert Farm Gems",function(state)
+ss:Toggle("Desert Farm Gems",function(state)
 _G.Race = (state and true or false)
 	wait()
 	while _G.Race == true do
@@ -842,7 +838,7 @@ game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Desert")
 end
 end)
 
-desert:Toggle("Desert Hoops",function(state)
+ss:Toggle("Desert Hoops",function(state)
 	_G.Hoops = (state and true or false)
 	wait()
 	while _G.Hoops == true do
@@ -856,7 +852,7 @@ desert:Toggle("Desert Hoops",function(state)
         end
 		end)
 
-desert:Toggle("Auto Finish Race",function(state)
+ss:Toggle("Auto Finish Race",function(state)
 _G.Race = (state and true or false)
 	wait()
 	while _G.Race == true do
@@ -871,8 +867,8 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2049.191
 end
 end)
 
-snow:Label("Snow Farm")
-snow:Toggle("Snow Orbs",function(state)
+ss:Label("Snow Farm")
+ss:Toggle("Snow Orbs",function(state)
 	_G.orbs = (state and true or false)
 	wait()
 	while _G.orbs == true do
@@ -924,7 +920,7 @@ game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Snow 
 
 end
 end)
-snow:Toggle("Snow Yellow Orbs",function(state)
+ss:Toggle("Snow Yellow Orbs",function(state)
 	_G.Hoops = (state and true or false)
 	wait()
 	while _G.Hoops == true do
@@ -980,7 +976,7 @@ end
 end)
 
 
-snow:Toggle("Snow Hoops",function(state)
+ss:Toggle("Snow Hoops",function(state)
 	_G.Hoops = (state and true or false)
 	wait()
 	while _G.Hoops == true do
@@ -994,7 +990,7 @@ snow:Toggle("Snow Hoops",function(state)
         end
 		end)
 
-snow:Toggle("Snow Gems",function(state)
+ss:Toggle("Snow Gems",function(state)
 	_G.Hoops = (state and true or false)
 	wait()
 	while _G.Hoops == true do
@@ -1049,8 +1045,8 @@ game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Snow City
 game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Snow City")
 end
 end)
-magma:Label("Magma Farm")
-magma:Toggle("Magma Yellow Orbs",function(state)
+ss:Label("Magma Farm")
+ss:Toggle("Magma Yellow Orbs",function(state)
 	_G.Hoops = (state and true or false)
 	wait()
 	while _G.Hoops == true do
@@ -1103,7 +1099,7 @@ game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Ma
 end
 end)
 
-magma:Toggle("Magma Red Orbs",function(state)
+ss:Toggle("Magma Red Orbs",function(state)
 	_G.v = (state and true or false)
 	wait()
 	while _G.v == true do
@@ -1160,7 +1156,7 @@ game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Magma
 game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Magma City")
 end
 end)
-magma:Toggle("Magma Gems",function(state)
+ss:Toggle("Magma Gems",function(state)
 	_G.Hoops = (state and true or false)
 	wait()
 	while _G.Hoops == true do
@@ -1213,7 +1209,180 @@ end
 end)
 
 
-magma:Toggle("Magma Hoops",function(state)
+ss:Toggle("Magma Hoops",function(state)
+	_G.Hoops = (state and true or false)
+	wait()
+	while _G.Hoops == true do
+		wait()
+    local children = workspace.Hoops:GetChildren()
+    for i, child in ipairs(children) do
+        if child.Name == "Hoop" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        end
+        end
+        end
+		end)
+ss:Label("Legends Highway Farm")
+ss:Toggle("Legends Highway Red Orbs",function(state)
+	_G.Lh = (state and true or false)
+	wait()
+	while _G.Lh == true do
+		wait()
+		game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Legends Highway")
+end
+end)
+ss:Toggle("Legends Highway Gems",function(state)
+	_G.Lh = (state and true or false)
+	wait()
+	while _G.Lh == true do
+		wait()
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Gem","Legends Highway")
+end
+end)
+
+ss:Toggle("Legends Highway Yellow Orbs",function(state)
+	_G.Lh = (state and true or false)
+	wait()
+	while _G.Lh == true do
+		wait()
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","Legends Highway")
+
+end
+end)
+
+ss:Toggle("Legends Highway Hoops",function(state)
 	_G.Hoops = (state and true or false)
 	wait()
 	while _G.Hoops == true do
@@ -1227,8 +1396,9 @@ magma:Toggle("Magma Hoops",function(state)
         end
 		end)
 
+egg:Label("Auto Hacth Eggs")
 egg:Label("Legends Highway Eggs")
-egg:Toggle("Hatch Egg",function(state)
+egg:Toggle("Electro Legends Crystal",function(state)
 	_G.BestEgg = (state and true or false)
 	wait()
 	while _G.BestEgg == true do
