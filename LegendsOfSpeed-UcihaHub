@@ -1,1 +1,2 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/fareljr1/MaterialLua/master/LegendsOfSpeedUPD.lua"))()
+setclipboard('https://youtube.com/channel/UCD7hHx9yNjik1HjX3GkxaeQ')
+game.Players.LocalPlayer:Kick("Script Expired !! Please Check New Video | link has been copied to the clipboard ")
